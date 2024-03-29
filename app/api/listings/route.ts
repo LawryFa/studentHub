@@ -18,10 +18,10 @@ export async function POST(
     description,
     imageSrc,
     category,
-    roomCount,
-    bathroomCount,
-    guestCount,
-    location,
+    roomCount = 1,
+    bathroomCount = 1,
+    guestCount = 1,
+    location = { value: "Default Location" },
     price,
    } = body;
 

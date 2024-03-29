@@ -1,0 +1,4 @@
+username:r194254r
+password: fpnCfr5mi3YJTZ26
+
+mongodb+srv://r194254r:fpnCfr5mi3YJTZ26@cluster0.xwpvprl.mongodb.net/

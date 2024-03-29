@@ -8,6 +8,8 @@ import getListings, {
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
 
+
+
 interface HomeProps {
   searchParams: IListingsParams
 };

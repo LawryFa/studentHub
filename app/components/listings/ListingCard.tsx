@@ -1,5 +1,6 @@
 'use client';
 
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
@@ -38,18 +39,25 @@ const ListingCard: React.FC<ListingCardProps> = ({
   const router = useRouter();
   const { getByValue } = useCountries();
 
-  const location = getByValue(data.locationValue);
+  const description = useMemo(() => {
+    const words = data.description.split(' ');
+    if (words.length <= 12) {
+      return data.description;
+    } else {
+      return words.slice(0, 12).join(' ') + '...';
+    }
+  }, [data.description]);
 
   const handleCancel = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+      e.stopPropagation();
 
-    if (disabled) {
-      return;
-    }
+      if (disabled) {
+        return;
+      }
 
-    onAction?.(actionId)
-  }, [disabled, onAction, actionId]);
+      onAction?.(actionId)
+    }, [disabled, onAction, actionId]);
 
   const price = useMemo(() => {
     if (reservation) {
@@ -108,19 +116,19 @@ const ListingCard: React.FC<ListingCardProps> = ({
             />
           </div>
         </div>
-        <div className="font-semibold text-lg">
-          {location?.region}, {location?.label}
+        <div className="font-light text-lg">
+          {description}
         </div>
         <div className="font-light text-neutral-500">
-          {reservationDate || data.category}
+          {data.createdAt}
         </div>
         <div className="flex flex-row items-center gap-1">
           <div className="font-semibold">
             $ {price}
           </div>
-          {!reservation && (
+          {/* {!reservation && (
             <div className="font-light">night</div>
-          )}
+          )} */}
         </div>
         {onAction && actionLabel && (
           <Button
