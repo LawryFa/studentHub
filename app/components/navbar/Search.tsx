@@ -23,7 +23,7 @@ const Search = () => {
       return getByValue(locationValue as string)?.label;
     }
 
-    return 'Anywhere';
+    return '';
   }, [locationValue, getByValue]);
 
   const durationLabel = useMemo(() => {
@@ -39,15 +39,15 @@ const Search = () => {
       return `${diff} Days`;
     }
 
-    return 'Any Week'
+    return 'browse the student market'
   }, [startDate, endDate]);
 
   const guestLabel = useMemo(() => {
     if (guestCount) {
-      return `${guestCount} Guests`;
+      return `${guestCount} `;
     }
 
-    return 'Add Guests';
+    return '';
   }, [guestCount]);
 
   return ( 
