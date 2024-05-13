@@ -86,6 +86,8 @@ export const categories = [
     label: 'Health & Fitness',
     icon: GiCactus,
     description: 'Health & Fitness'
+  
+  },
   {
     label: 'Liquor',
     icon: GiBarn,
