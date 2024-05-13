@@ -118,7 +118,7 @@ Sell         </div>
                   onClick={() => router.push('/properties')}
                 />
                 <MenuItem 
-                  label="Airbnb your home" 
+                  label="Sell" 
                   onClick={rentModal.onOpen}
                 />
                 <hr />
