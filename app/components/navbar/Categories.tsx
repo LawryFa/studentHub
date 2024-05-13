@@ -83,10 +83,9 @@ export const categories = [
     description: 'Cosmetic services'
   },
   {
-    label: 'Health & Fitness',
-    icon: GiCactus,
-    description: 'Health & Fitness'
-  
+    label: 'Cosmetics',
+    icon: BsSnow,
+    description: 'Cosmetic services'
   },
   {
     label: 'Liquor',
