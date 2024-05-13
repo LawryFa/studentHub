@@ -23,79 +23,78 @@ import Container from '../Container';
 
 export const categories = [
   {
-    label: 'Beach',
+    label: 'PC/Laptop',
     icon: TbBeach,
-    description: 'This property is close to the beach!',
+    description: 'Personal Computers and accesories',
   },
   {
-    label: 'Windmills',
+    label: 'Mobile Phones',
     icon: GiWindmill,
-    description: 'This property is has windmills!',
+    description: 'cellphones, tablets and accesories',
   },
   {
-    label: 'Modern',
+    label: 'Clothes',
     icon: MdOutlineVilla,
-    description: 'This property is modern!'
+    description: 'anything that can be worn'
   },
   {
-    label: 'Countryside',
+    label: 'Books',
     icon: TbMountain,
-    description: 'This property is in the countryside!'
+    description: 'Anything that can be read'
   },
   {
-    label: 'Pools',
+    label: 'Food',
     icon: TbPool,
-    description: 'This is property has a beautiful pool!'
+    description: 'anything legal that can be drunk or eaten'
   },
   {
-    label: 'Islands',
+    label: 'Hair services',
     icon: GiIsland,
-    description: 'This property is on an island!'
+    description: 'hair services'
   },
   {
-    label: 'Lake',
+    label: 'Barber',
     icon: GiBoatFishing,
-    description: 'This property is near a lake!'
+    description: 'barber services'
   },
   {
-    label: 'Skiing',
+    label: 'Tutors',
     icon: FaSkiing,
-    description: 'This property has skiing activies!'
+    description: 'tutorial services'
   },
   {
-    label: 'Castles',
+    label: 'Software',
     icon: GiCastle,
-    description: 'This property is an ancient castle!'
+    description: 'all software products and services'
   },
   {
-    label: 'Caves',
+    label: 'Accomodation',
     icon: GiCaveEntrance,
-    description: 'This property is in a spooky cave!'
+    description: 'Housing hub'
   },
   {
-    label: 'Camping',
+    label: 'Transport',
     icon: GiForestCamp,
-    description: 'This property offers camping activities!'
+    description: 'Transport services'
   },
   {
-    label: 'Arctic',
+    label: 'Cosmetics',
     icon: BsSnow,
-    description: 'This property is in arctic environment!'
+    description: 'Cosmetic services'
   },
   {
-    label: 'Desert',
+    label: 'Health & Fitness',
     icon: GiCactus,
-    description: 'This property is in the desert!'
-  },
+    description: 'Health & Fitness'
   {
-    label: 'Barns',
+    label: 'Liquor',
     icon: GiBarn,
-    description: 'This property is in a barn!'
+    description: 'alcoholic beverages'
   },
   {
-    label: 'Lux',
+    label: 'Events',
     icon: IoDiamond,
-    description: 'This property is brand new and luxurious!'
+    description: 'events'
   }
 ]
 
