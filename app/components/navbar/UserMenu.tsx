@@ -58,8 +58,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             cursor-pointer
           "
         >
-          Airbnb your home
-        </div>
+Sell         </div>
         <div 
         onClick={toggleOpen}
         className="
