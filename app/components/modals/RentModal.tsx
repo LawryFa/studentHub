@@ -118,7 +118,7 @@ const RentModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Which of these best describes your place?"
+        title="Which of these best describes your product or service?"
         subtitle="Pick a category"
       />
       <div 
@@ -152,7 +152,7 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Add a photo of your place"
-          subtitle="Show guests what your place looks like!"
+          subtitle="Add an image of your product or service"
         />
         <ImageUpload
           onChange={(value) => setCustomValue('imageSrc', value)}
@@ -166,7 +166,7 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="How would you describe your place?"
+          title="Tell us something about your product or service. Then add your contact details"
           subtitle="Short and sweet works best!"
         />
         <Input
@@ -185,6 +185,15 @@ const RentModal = () => {
           register={register}
           errors={errors}
           required
+        />
+        
+        <Input
+          id="description"
+          label="Contact Details"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          
         />
       </div>
     )
