@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import { FaLaptop, FaMobileAlt } from "react-icons/fa";
+import { FaLaptop, FaMobileAlt, FaHouseUser } from "react-icons/fa";
 import { IoCutSharp, IoFastFood } from "react-icons/io5";
 
 import { 
@@ -11,7 +11,7 @@ import {
   GiCactus, 
   GiCastle, 
   GiClothes, 
-
+GiHairStrands,
   GiCaveEntrance, 
   GiForestCamp, 
   GiIsland,
@@ -21,7 +21,7 @@ import { FaSkiing } from 'react-icons/fa';
 import { BsSnow } from 'react-icons/bs';
 import { IoDiamond } from 'react-icons/io5';
 import { MdOutlineVilla } from 'react-icons/md';
-import { IoBookSharp } from "react-icons/io5";
+import { IoBookSharp,IoCutSharp } from "react-icons/io5";
 
 import CategoryBox from "../CategoryBox";
 import Container from '../Container';
@@ -70,7 +70,7 @@ export const categories = [
   },
   {
     label: 'Software',
-    icon: GrCloudSoftware,
+    icon: FaLaptop,
     description: 'all software products and services'
   },
   {
