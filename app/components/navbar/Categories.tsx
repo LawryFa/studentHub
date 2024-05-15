@@ -3,6 +3,7 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
 import { FaLaptop, FaMobileAlt } from "react-icons/fa";
+import { IoCutSharp, IoFastFood } from "react-icons/io5";
 
 import { 
   GiBarn, 
@@ -49,17 +50,17 @@ export const categories = [
   },
   {
     label: 'Food',
-    icon: TbPool,
+    icon: IoFastFood,
     description: 'anything legal that can be drunk or eaten'
   },
   {
     label: 'Hair services',
-    icon: GiIsland,
+    icon: GiHairStrands,
     description: 'hair services'
   },
   {
     label: 'Barber',
-    icon: GiBoatFishing,
+    icon: IoCutSharp,
     description: 'barber services'
   },
   {
@@ -69,12 +70,12 @@ export const categories = [
   },
   {
     label: 'Software',
-    icon: GiCastle,
+    icon: GrCloudSoftware,
     description: 'all software products and services'
   },
   {
     label: 'Accomodation',
-    icon: GiCaveEntrance,
+    icon: FaHouseUser,
     description: 'Housing hub'
   },
   {
