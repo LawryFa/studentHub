@@ -64,12 +64,12 @@ const RegisterModal= () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome to Airbnb"
-        subtitle="Create an account!"
+        title="Welcome to the Student Market"
+        subtitle="Create an account with your MSU student email"
       />
       <Input
         id="email"
-        label="Email"
+        label="MSU Email"
         disabled={isLoading}
         register={register}
         errors={errors}
