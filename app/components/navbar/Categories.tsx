@@ -21,7 +21,7 @@ import { FaSkiing } from 'react-icons/fa';
 import { BsSnow } from 'react-icons/bs';
 import { IoDiamond } from 'react-icons/io5';
 import { MdOutlineVilla } from 'react-icons/md';
-import { IoBookSharp,IoCutSharp } from "react-icons/io5";
+import { IoBookSharp } from "react-icons/io5";
 
 import CategoryBox from "../CategoryBox";
 import Container from '../Container';
