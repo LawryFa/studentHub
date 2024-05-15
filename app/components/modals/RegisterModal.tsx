@@ -69,7 +69,7 @@ const RegisterModal= () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome to the Student Market"
+        title="Welcome to the Student Market!"
         subtitle="Create an account!"
       />
       <Input
