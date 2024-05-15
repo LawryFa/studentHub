@@ -20,23 +20,6 @@ import Input from "../inputs/Input";
 import Heading from "../Heading";
 import Button from "../Button";
 
-const [email, setEmail] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleEmailChange = (e: { target: { value: any; }; }) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    // Check if email ends with "@students.msu.ac.zw"
-    if (!email.endsWith('@students.msu.ac.zw')) {
-      setErrorMessage('Only Midlands State University student emails allowed');
-      return;
-    }
-    // Proceed with registration logic
-    // Your registration logic here...
-  };
 
 
 const RegisterModal= () => {
@@ -93,7 +76,6 @@ const RegisterModal= () => {
         id="email"
         label="MSU student email"
         disabled={isLoading}
-        onChange={handleEmailChange}
         register={register}
         errors={errors}
         required
