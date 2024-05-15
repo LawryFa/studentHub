@@ -123,7 +123,7 @@ Sell        </div>
                   onClick={loginModal.onOpen}
                 />
                 <MenuItem 
-                  label="Sign up" 
+                  label="Sign Up" 
                   onClick={registerModal.onOpen}
                 />
               </>
