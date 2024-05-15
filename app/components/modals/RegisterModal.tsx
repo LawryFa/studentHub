@@ -20,16 +20,11 @@ import Input from "../inputs/Input";
 import Heading from "../Heading";
 import Button from "../Button";
 
-
-
 const RegisterModal= () => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
 
-
-
-  
   const { 
     register, 
     handleSubmit,
@@ -69,12 +64,12 @@ const RegisterModal= () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome to the Student Market!"
+        title="Welcome to Airbnb"
         subtitle="Create an account!"
       />
       <Input
         id="email"
-        label="MSU student email"
+        label="Email"
         disabled={isLoading}
         register={register}
         errors={errors}
@@ -108,6 +103,12 @@ const RegisterModal= () => {
         label="Continue with Google"
         icon={FcGoogle}
         onClick={() => signIn('google')} 
+      />
+      <Button 
+        outline 
+        label="Continue with Github"
+        icon={AiFillGithub}
+        onClick={() => signIn('github')}
       />
       <div 
         className="
