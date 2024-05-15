@@ -20,11 +20,33 @@ import Input from "../inputs/Input";
 import Heading from "../Heading";
 import Button from "../Button";
 
+const [email, setEmail] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleEmailChange = (e: { target: { value: any; }; }) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    // Check if email ends with "@students.msu.ac.zw"
+    if (!email.endsWith('@students.msu.ac.zw')) {
+      setErrorMessage('Only Midlands State University student emails allowed');
+      return;
+    }
+    // Proceed with registration logic
+    // Your registration logic here...
+  };
+
+
 const RegisterModal= () => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
 
+
+
+  
   const { 
     register, 
     handleSubmit,
@@ -64,13 +86,14 @@ const RegisterModal= () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome to Airbnb"
+        title="Welcome to the Student Market"
         subtitle="Create an account!"
       />
       <Input
         id="email"
-        label="Email"
+        label="MSU student email"
         disabled={isLoading}
+        onChange={handleEmailChange}
         register={register}
         errors={errors}
         required
@@ -103,12 +126,6 @@ const RegisterModal= () => {
         label="Continue with Google"
         icon={FcGoogle}
         onClick={() => signIn('google')} 
-      />
-      <Button 
-        outline 
-        label="Continue with Github"
-        icon={AiFillGithub}
-        onClick={() => signIn('github')}
       />
       <div 
         className="

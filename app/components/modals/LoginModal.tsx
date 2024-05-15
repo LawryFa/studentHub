@@ -70,12 +70,12 @@ const LoginModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome back"
+        title="Welcome back to the Student Market"
         subtitle="Login to your account!"
       />
       <Input
         id="email"
-        label="Email"
+        label="MSU student email ONLY"
         disabled={isLoading}
         register={register}  
         errors={errors}
@@ -102,15 +102,10 @@ const LoginModal = () => {
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
-      <Button 
-        outline 
-        label="Continue with Github"
-        icon={AiFillGithub}
-        onClick={() => signIn('github')}
-      />
+     
       <div className="
       text-neutral-500 text-center mt-4 font-light">
-        <p>First time using Airbnb?
+        <p>First time using the Student Market?
           <span 
             onClick={onToggle} 
             className="

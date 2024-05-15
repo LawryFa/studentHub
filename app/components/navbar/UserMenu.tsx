@@ -58,7 +58,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             cursor-pointer
           "
         >
-Sell         </div>
+Sell        </div>
         <div 
         onClick={toggleOpen}
         className="
@@ -101,24 +101,13 @@ Sell         </div>
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
+                
                 <MenuItem 
-                  label="My trips" 
-                  onClick={() => router.push('/trips')}
-                />
-                <MenuItem 
-                  label="My favorites" 
-                  onClick={() => router.push('/favorites')}
-                />
-                <MenuItem 
-                  label="My reservations" 
-                  onClick={() => router.push('/reservations')}
-                />
-                <MenuItem 
-                  label="My properties" 
+                  label="My dashboard" 
                   onClick={() => router.push('/properties')}
                 />
                 <MenuItem 
-                  label="Sell" 
+                  label="Sell or rent product" 
                   onClick={rentModal.onOpen}
                 />
                 <hr />
