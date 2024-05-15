@@ -2,11 +2,15 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
+import { FaLaptop, FaMobileAlt } from "react-icons/fa";
+
 import { 
   GiBarn, 
   GiBoatFishing, 
   GiCactus, 
   GiCastle, 
+  GiClothes, 
+
   GiCaveEntrance, 
   GiForestCamp, 
   GiIsland,
@@ -16,6 +20,7 @@ import { FaSkiing } from 'react-icons/fa';
 import { BsSnow } from 'react-icons/bs';
 import { IoDiamond } from 'react-icons/io5';
 import { MdOutlineVilla } from 'react-icons/md';
+import { IoBookSharp } from "react-icons/io5";
 
 import CategoryBox from "../CategoryBox";
 import Container from '../Container';
@@ -24,22 +29,22 @@ import Container from '../Container';
 export const categories = [
   {
     label: 'PC/Laptop',
-    icon: TbBeach,
+    icon: FaLaptop,
     description: 'Personal Computers and accesories',
   },
   {
     label: 'Mobile Phones',
-    icon: GiWindmill,
+    icon: FaMobileAlt,
     description: 'cellphones, tablets and accesories',
   },
   {
     label: 'Clothes',
-    icon: MdOutlineVilla,
+    icon: GiClothes,
     description: 'anything that can be worn'
   },
   {
     label: 'Books',
-    icon: TbMountain,
+    icon: IoBookSharp,
     description: 'Anything that can be read'
   },
   {
