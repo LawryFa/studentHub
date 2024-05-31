@@ -32,15 +32,23 @@ const LoginModal = () => {
     formState: {
       errors,
     },
+    setError
   } = useForm<FieldValues>({
     defaultValues: {
       email: '',
       password: ''
     },
   });
-  
-  const onSubmit: SubmitHandler<FieldValues> = 
-  (data) => {
+
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    if (!data.email.endsWith('@msu.students.ac.zw')) {
+      setError('email', {
+        type: 'manual',
+        message: 'Only MSU email addresses allowed',
+      });
+      return;
+    }
+
     setIsLoading(true);
 
     signIn('credentials', { 
@@ -65,12 +73,12 @@ const LoginModal = () => {
   const onToggle = useCallback(() => {
     loginModal.onClose();
     registerModal.onOpen();
-  }, [loginModal, registerModal])
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome back to the Student Market"
+        title={errors.email ? errors.email.message : "Welcome back to the Student Market"}
         subtitle="Login to your account!"
       />
       <Input
@@ -91,7 +99,7 @@ const LoginModal = () => {
         required
       />
     </div>
-  )
+  );
 
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
@@ -102,7 +110,6 @@ const LoginModal = () => {
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
-     
       <div className="
       text-neutral-500 text-center mt-4 font-light">
         <p>First time using the Student Market?
@@ -117,7 +124,7 @@ const LoginModal = () => {
         </p>
       </div>
     </div>
-  )
+  );
 
   return (
     <Modal
