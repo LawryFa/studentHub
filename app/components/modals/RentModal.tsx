@@ -1,5 +1,6 @@
-'use client';
-
+"use client";
+ 
+import { UploadButton } from "./uploadthing/uploadthing";
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { 
@@ -10,6 +11,9 @@ import {
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/navigation';
 import { useMemo, useState } from "react";
+
+import { generateUploadButton } from "@uploadthing/react";
+ 
 
 import useRentModal from '@/app/hooks/useRentModal';
 
@@ -149,16 +153,20 @@ const RentModal = () => {
  
   if (step === STEPS.IMAGES) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
-        <Heading
-          title="Add a photo of your place"
-          subtitle="Add an image of your product or service"
-        />
-        <ImageUpload
-          onChange={(value) => setCustomValue('imageSrc', value)}
-          value={imageSrc}
-        />
-      </div>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <UploadButton
+        endpoint="imageUploader"
+        onClientUploadComplete={(res: any) => {
+          // Do something with the response
+          console.log("Files: ", res);
+          alert("Upload Completed");
+        }}
+        onUploadError={(error: Error) => {
+          // Do something with the error.
+          alert(`ERROR! ${error.message}`);
+        }}
+      />
+    </main>
     )
   }
 
