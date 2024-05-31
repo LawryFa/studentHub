@@ -68,40 +68,29 @@ const RegisterModal = () => {
       <Input
         id="email"
         label="MSU Email"
+        type="email"
         disabled={isLoading}
         register={register({
           required: "MSU email is required",
           validate: value => value.endsWith("@msu.students.ac.zw") || "Only MSU email addresses allowed"
         })}
-        errors={errors}
-        required
+        errors={errors.email}
       />
-      {errors.email && (
-        <span className="text-red-600">{errors.email.message}</span>
-      )}
       <Input
         id="name"
         label="Name"
         disabled={isLoading}
         register={register({ required: "Name is required" })}
-        errors={errors}
-        required
+        errors={errors.name}
       />
-      {errors.name && (
-        <span className="text-red-600">{errors.name.message}</span>
-      )}
       <Input
         id="password"
         label="Password"
         type="password"
         disabled={isLoading}
         register={register({ required: "Password is required" })}
-        errors={errors}
-        required
+        errors={errors.password}
       />
-      {errors.password && (
-        <span className="text-red-600">{errors.password.message}</span>
-      )}
     </div>
   );
 
