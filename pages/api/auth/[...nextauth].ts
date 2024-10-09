@@ -17,7 +17,24 @@ export const authOptions: AuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
-    });
+    }), // Replaced semicolon with a comma here
+    CredentialsProvider({
+      name: "credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" }
+      },
+      async authorize(credentials) {
+        try {
+          if (!credentials?.email || !credentials?.password) {
+            throw new Error("Invalid credentials");
+          }
+
+          const user = await prisma.user.findUnique({
+            where: {
+              email: credentials.email,
+            }
+          });
 
           if (!user || !user?.hashedPassword) {
             throw new Error('Invalid credentials');
@@ -34,7 +51,6 @@ export const authOptions: AuthOptions = {
 
           return user;
         } catch (error) {
-          // Catch any errors and return them as part of the authorize callback
           return Promise.reject(new Error('Invalid credentials'));
         }
       }
