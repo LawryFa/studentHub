@@ -1,7 +1,8 @@
 import React from 'react';
 import { GiCactus, GiBarn } from 'react-icons/gi';
 
-const categories = [
+// Export the categories array so it can be used elsewhere
+export const categories = [
   {
     label: 'Health & Fitness',
     icon: GiCactus,
@@ -10,7 +11,7 @@ const categories = [
   {
     label: 'Liquor',
     icon: GiBarn,
-    description: 'alcoholic beverages'
+    description: 'Alcoholic beverages'
   }
 ];
 
